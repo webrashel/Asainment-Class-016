@@ -32,6 +32,12 @@ INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('america','8500
 SELECT * FROM users INNER JOIN users_details ON users.id=users_details.user_id  ORDER BY users.id ASC;
 
 
+//Left join//
 
+SELECT * FROM users LEFT JOIN users_details ON users.id=users_details.user_id  ORDER BY users.id ASC;
+
+//right join//
+
+SELECT * FROM users RIGHT JOIN users_details ON users.id=users_details.user_id  ORDER BY users.id ASC;
 
 
