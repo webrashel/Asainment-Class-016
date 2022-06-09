@@ -1,0 +1,37 @@
+
+//table number=01//
+
+CREATE TABLE users( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50), 
+address VARCHAR(120), created_at TIMESTAMP);
+
+INSERT INTO users(username, address) VALUES ('rashel','jessore');
+INSERT INTO users(username, address) VALUES ('rana','bagherpara');
+INSERT INTO users(username, address) VALUES ('islam','vittavolla');
+INSERT INTO users(username, address) VALUES ('akash','khulna');
+INSERT INTO users(username, address) VALUES ('billal','jekorgasa');
+INSERT INTO users(username, address) VALUES ('Easin','magura');
+
+
+
+//table number=02//
+
+CREATE TABLE users_details( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, country 
+VARCHAR(100),Monthly_salary FLOAT,user_id INT);
+
+
+INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('bangladesh','5000', '3');
+INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('pakistan','7000', '1');
+INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('indea','9000', '2');
+INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('london','11000', '5');
+INSERT INTO users_details(country,Monthly_salary,user_id) VALUES('america','8500', '4');
+
+
+
+// inner join//
+
+SELECT * FROM users INNER JOIN users_details ON users.id=users_details.user_id  ORDER BY users.id ASC;
+
+
+
+
+
